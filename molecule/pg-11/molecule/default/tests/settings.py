@@ -6,10 +6,9 @@ DEB_PACKAGES = ["percona-postgresql-11", "percona-postgresql-client", "percona-p
                 "percona-postgresql-client-11", "percona-postgresql-client-common",
                 "percona-postgresql-contrib", "percona-postgresql-doc", "percona-postgresql-server-dev-all",
                 "percona-postgresql-doc-11", "percona-postgresql-plperl-11", "percona-postgresql-common",
-                "percona-postgresql-plpython-11", "percona-postgresql-plpython3-11",
-                "percona-postgresql-pltcl-11", "percona-postgresql-all", "percona-postgresql-server-dev-11",
-                "percona-postgresql-11-dbgsym", "percona-postgresql-client-11-dbgsym",
-                "percona-postgresql-plperl-11-dbgsym", "percona-postgresql-plpython-11-dbgsym",
+                "percona-postgresql-plpython3-11", "percona-postgresql-pltcl-11", "percona-postgresql-all",
+                "percona-postgresql-server-dev-11", "percona-postgresql-11-dbgsym",
+                "percona-postgresql-client-11-dbgsym", "percona-postgresql-plperl-11-dbgsym",
                 "percona-postgresql-plpython3-11-dbgsym", "percona-postgresql-pltcl-11-dbgsym",
                 "percona-postgresql-server-dev-11-dbgsym"]
 
