@@ -38,24 +38,6 @@ PACKAGES = ["libecpg-compat3", "libecpg-compat3-dbgsym", "libecpg-dev-dbgsym", "
 # def fdw_functional(host):
 #     pass
 
-@pytest.fixture()
-def pythonu_function(host):
-    with host.sudo("postgres"):
-        install_extension = host.run("psql -c 'CREATE EXTENSION IF NOT EXISTS\"plpythonu\";'")
-        assert install_extension.rc == 0
-        create_function = """CREATE FUNCTION pymax (a integer, b integer)
-          RETURNS integer
-        AS $$
-          if a > b:
-            return a
-          return b
-        $$ LANGUAGE plpythonu;
-                """
-        execute_psql = host.run("psql -c \'{}\'".format(create_function))
-        assert execute_psql.rc == 0
-        assert execute_psql.stdout.strip("\n") == "CREATE FUNCTION"
-        return execute_psql
-
 
 @pytest.fixture()
 def perl_function(host):
