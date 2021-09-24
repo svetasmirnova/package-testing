@@ -27,7 +27,7 @@
     include_tasks: ../tasks/test_prep.yml
 
   - name: include tasks for enabling main repo
-    include_tasks: ../tasks/enable_main_repo.yml
+    include_tasks: ../tasks/enable_tools_main_repo.yml
 
   - name: install PMM2 client old deb packages
     apt: name={{item}} update_cache=yes state=latest
