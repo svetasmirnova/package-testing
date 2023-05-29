@@ -88,14 +88,12 @@
       command: percona-release enable-only pmm2-client release
       become: true
 
-    - name: Update apt-get repo
-      apt: force_apt_get=yes
+    - name: Update apt repositories
+      command: apt-get update -y
       when: ansible_os_family == "Debian"
 
-    - name: Update yum repo
-      yum:
-        name: '*'
-        state: latest
+    - name: Update repo for redhat
+      shell: yum update -y
       when: ansible_os_family == "RedHat"
 
     - name: Get pmm2-client versions from yum
@@ -121,14 +119,12 @@
       command: percona-release enable-only pmm2-client testing
       become: true
 
-    - name: Update apt-get repo
-      apt: force_apt_get=yes
+    - name: Update apt repositories
+      command: apt-get update -y
       when: ansible_os_family == "Debian"
 
-    - name: Update yum repo
-      yum:
-        name: '*'
-        state: latest
+    - name: Update repo for redhat
+      shell: yum update -y
       when: ansible_os_family == "RedHat"
 
     - name: Get pmm2-client versions from yum
@@ -154,14 +150,12 @@
       command: percona-release enable-only pmm2-client experimental
       become: true
 
-    - name: Update apt-get repo
-      apt: force_apt_get=yes
+    - name: Update apt repositories
+      command: apt-get update -y
       when: ansible_os_family == "Debian"
 
-    - name: Update yum repo
-      yum:
-        name: '*'
-        state: latest
+    - name: Update repo for redhat
+      shell: yum update -y
       when: ansible_os_family == "RedHat"
 
     - name: Get pmm2-client versions from yum
