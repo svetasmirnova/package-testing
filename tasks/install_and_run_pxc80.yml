@@ -10,7 +10,13 @@
       update_cache: yes
     vars:
       packages:
-      - percona-xtradb-cluster-full
+        #- percona-xtradb-cluster-full
+      - percona-xtradb-cluster-shared
+      - percona-xtradb-cluster-shared-compat
+      - percona-xtradb-cluster-client
+      - percona-xtradb-cluster-garbd
+      - percona-xtradb-cluster-icu-data-files
+      - percona-xtradb-cluster-server
     when: ansible_os_family == "Debian"
     environment:
       PERCONA_TELEMETRY_URL: "https://check-dev.percona.com/v1/telemetry/GenericReport"
