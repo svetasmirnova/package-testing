@@ -13,7 +13,6 @@
         #- percona-xtradb-cluster-full
       - percona-xtradb-cluster-client
       - percona-xtradb-cluster-garbd
-      - percona-xtradb-cluster-icu-data-files
       - percona-xtradb-cluster-server
     when: ansible_os_family == "Debian"
     environment:
